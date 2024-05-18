@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Pagamento</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .esconder { display: none; }
+  .mostrar { display: block; }
+  #formularioPagamento div { margin-bottom: 10px; }
+  button { padding: 10px; margin-right: 5px; }
+</style>
+</head>
+<body>
+
+<h2>Página de Pagamento</h2>
+
+<div id="opcoesPagamento">
+  <button onclick="mostrarFormulario('credito')">Crédito</button>
+  <button onclick="mostrarFormulario('debito')">Débito</button>
+  <button onclick="mostrarFormulario('pix')">Pix</button>
+</div>
+
+<div id="formularioPagamento">
+  <div id="dadosCartao" class="esconder">
+    <input type="text" id="cpf" placeholder="CPF" required>
+    <input type="text" id="numeroCartao" placeholder="Número do Cartão" required>
+    <input type="text" id="nomeCartao" placeholder="Nome no Cartão" required>
+    <input type="text" id="cvc" placeholder="CVC" required>
+    <input type="month" id="validade" required>
+  </div>
+  <div id="dadosPix" class="esconder">
+    <input type="text" id="cpfPix" placeholder="CPF" required>
+  </div>
+  <button onclick="processarPagamento()">Pagar</button>
+</div>
+
+<script>
+function mostrarFormulario(tipo) {
+  var dadosCartao = document.getElementById('dadosCartao');
+  var dadosPix = document.getElementById('dadosPix');
+  dadosCartao.classList.add('esconder');
+  dadosPix.classList.add('esconder');
+  
+  if (tipo === 'credito' || tipo === 'debito') {
+    dadosCartao.classList.remove('esconder');
+  } else if (tipo === 'pix') {
+    dadosPix.classList.remove('esconder');
+  }
+}
+
+function processarPagamento() {
+  // Aqui você adicionaria o código para processar o pagamento
+  alert('Pagamento processado!');
+}
+</script>
+
+</body>
+</html>
