@@ -6,37 +6,46 @@
     <link rel="stylesheet" href="pagamento.css">
     <title>Pagamento</title>
 </head>
-<body class="container">
+<body>
 
-    <header>
-        <h1 class="titulo"></h1>
-    </header>
+    <section class="pag">
 
-    <nav>
-        <div class="retangulonav">
+        <div class="info">
 
-            <div class="credito">
-                <button>Crédito</button>
-            </div>
-
-            <div class="debito">
-                <button>Débito</button>
-            </div>
-
-            <div class="pix">
-                <button>Pix</button>
-            </div>
-            
         </div>
-    </nav>
 
-    <main>
-        <div class="retangulomain">
-            <h1 class="titulo">Pagamento</h1>
+        <div class="form">
+            <form method="post">
+
+                <div class="form100">
+                    <label for="">Email</label>
+                    <input type="text">
+                </div>
+                <div class="form100">
+                    <label for="">Dados do Cartão</label>
+                    <input type="text" placeholder="0000 0000 0000 0000">
+                    
+                    <div class="form50">
+                        <input type="text" placeholder="mm/aa">
+                        <input type="text" placeholder="CVC">
+                    </div>
+                
+                </div>
+                <div class="form100">
+                    <input type="text" placeholder="Nome no Cartão">
+                </div>
+                <div class="form100">
+                    <input type="text" placeholder="CPF do titular">
+                </div>
+                <div class="form100">
+                    <input type="submit" name="acao" value="Pagar">
+                </div>
+
+            </form>
         </div>
-    </main>
 
-    <footer></footer>
+    </section>
+    
     
 </body>
 </html>
