@@ -11,12 +11,18 @@
     padding: 0;
 }
 
+header{
+    display: block;
+}
+
 .logo{
     position: absolute;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     width: 162px;
-    height: 154px;
-    right: 835px;
-    top: 20px;
+    right: 920px;
+    top: 10px;
 }
 
 body {
@@ -34,6 +40,7 @@ section.pag {
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
+    margin-top: 250px;
 }
 
 #opcoes {
